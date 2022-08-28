@@ -1,0 +1,150 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1.title {
+  color: #fff;
+  font-size: 45px;
+  font-style: italic;
+  font-weight: 200;
+  letter-spacing: 9px;
+  margin-bottom: 0;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  text-align: right;
+}
+
+span.title-app {
+  letter-spacing: 2px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+div.header {
+  background-color: rgb(32, 178, 170);
+  border-style: inset rgb(32, 178, 170);
+  border-radius: 10px 10px 0 0;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+div.body {
+  background-image: url("coast.jpg");
+  background-size: 540px 551px;
+  padding: 10px;
+  padding-bottom: 60px;
+  padding-left: 10px;
+}
+
+form.search-form {
+  display: inline;
+}
+
+.city-box {
+  border: solid 1px lightblue;
+  border-radius: 6px;
+  font-weight: 300;
+  padding: 5px;
+}
+
+button.search-button {
+  background-color: #20b2aa;
+  border: solid 2px #20b2aa;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 300;
+  padding: 4px 8px;
+}
+
+button.search-button:hover {
+  background-color: rgb(32, 178, 170, 0.7);
+  transition: all 150ms ease-in-out;
+}
+
+button.location-pin {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+}
+
+button.location-pin:hover {
+  color: #ffdd67;
+  transition: all 150ms ease-in;
+}
+
+.c-f-switch {
+  background-color: rgb(32, 178, 170, 0.7);
+  border: solid 2px #20b2aa;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 300;
+  padding: 0px 30px 0px 30px;
+  position: relative;
+  top: -20px;
+  right: -40px;
+}
+
+h1.current-temp {
+  color: #fff;
+  font-size: 150px;
+  font-weight: 400;
+  position: relative;
+  top: 136px;
+  left: 42px;
+}
+
+h2.city {
+  color: #fcd307;
+  font-size: 33px;
+  font-weight: 300;
+  margin-bottom: 0;
+  margin-top: 24px;
+  text-align: right;
+}
+
+h5.date-time {
+  color: #ffdd67;
+  font-size: 21px;
+  font-weight: 300;
+  text-align: right;
+}
+
+ul {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 2rem;
+  list-style-type: none;
+  padding-left: 45px;
+  padding-top: 40px;
+  text-align: right;
+}
+
+div.forecast {
+  background: linear-gradient(
+    110.7deg,
+    rgb(9, 154, 151) 6.3%,
+    rgb(21, 205, 168) 90.6%
+  );
+  color: #fff;
+  font-weight: 300;
+  margin-top: 0;
+  padding-top: 10px;
+  text-align: center;
+}
+
+div.weather-icon {
+  color: rgb(255, 255, 255, 0.7);
+  font-size: 30px;
+  padding: 5px 0 5px 0;
+}
+
+span.future-temp {
+  font-size: 24px;
+  font-weight: 200;
+  position: relative;
+  top: -23px;
+}

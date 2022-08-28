@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>weatherapp</title>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400&display=swap" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/c14cd0a378.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row header">
+        <div class="col">
+          <h1 class="title">weather<span class="title-app">app</span></h1>
+        </div>
+      </div>
+      <div class="row body">
+        <div class="col-12 search">
+          <form action="" class="search-form" id="search-form">
+            <input type="text" placeholder="Enter your city" class="city-box" id="city-input"/>
+            <button type="submit" class="search-button">Search</button>
+          </form>
+          <button class="location-pin" id="location-pin">
+            <i class="fa-solid fa-map-pin pin"></i>
+          </button>
+        </div>
+        <div class="col-5">
+          <h1 class="current-temp" id="current-temp">14°</h1>
+        </div>
+        <div class="col-7">
+           <h2 class="city" id="current-city">Sydney</h2>
+          <h5 class="date-time" id="current-date-time"></h5>
+          <br>  
+          <ul>
+              <li id="weather-overall">Cloudy</li>
+              <li>
+                <i class="fa-solid fa-temperature-three-quarters"></i>
+                <span id="min-temp">10</span> /
+                <strong id="max-temp">16</strong>
+              </li>
+              <li><i class="fa-solid fa-cloud-rain"></i> <span id="humidity">30</span>% humidity</li>
+              <li><i class="fa-solid fa-wind"></i><span id="wind">20</span>km/hr</li>
+            </ul>
+          </div>
+        </div>
+      <div class="row forecast">
+        <div class="col">
+                  <div class="weather-icon"><i class="fa-solid fa-cloud-sun"></i></div>
+         <p>Sunday</p> 
+        <span class="future-temp">16°</span>
+        </div>
+        <div class="col">
+           <div class="weather-icon"><i class="fa-solid fa-sun"></i></div>
+          <p>Monday</p> 
+        <span class="future-temp">20°</span>
+        </div>
+        <div class="col">
+           <div class="weather-icon">
+            <i class="fa-solid fa-cloud-sun"></i>
+          </div>
+          <p>Tuesday</p> 
+        <span class="future-temp">17°</span>
+        </div>
+        <div class="col">
+          <div class="weather-icon">
+         <i class="fa-solid fa-cloud"></i></div>
+          <p>Wednesday</p> 
+        <span class="future-temp">14°</span>
+        </div>
+        <div class="col">
+          <div class="weather-icon"><i class="fa-solid fa-cloud-sun"></i></div>
+          <p>Thursday</p> 
+        <span class="future-temp">18°</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="script.js">
+</script>
+  </body>
+</html>
