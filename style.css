@@ -1,5 +1,7 @@
 body {
   font-family: "Roboto", sans-serif;
+  margin: 0 auto;
+  max-width: 551px;
 }
 
 h1.title {
@@ -24,8 +26,6 @@ div.header {
   background-color: rgb(32, 178, 170);
   border-style: inset rgb(32, 178, 170);
   border-radius: 10px 10px 0 0;
-  margin-top: 30px;
-  margin-bottom: 0;
 }
 
 div.body {
