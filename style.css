@@ -1,7 +1,7 @@
 body {
   font-family: "Roboto", sans-serif;
   margin: 0 auto;
-  max-width: 551px;
+  max-width: 600px;
 }
 
 h1.title {
@@ -30,7 +30,7 @@ div.header {
 
 div.body {
   background-image: url("coast.jpg");
-  background-size: 540px 551px;
+  background-size: 540px 600px;
   padding: 10px;
   padding-bottom: 60px;
   padding-left: 10px;
