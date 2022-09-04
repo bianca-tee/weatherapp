@@ -24,16 +24,11 @@ span.title-app {
 
 div.header {
   background-color: rgb(32, 178, 170);
-  border-style: inset rgb(32, 178, 170);
-  border-radius: 10px 10px 0 0;
 }
 
 div.body {
-  background-image: url("coast.jpg");
-  background-size: 540px 600px;
-  padding: 10px;
-  padding-bottom: 60px;
-  padding-left: 10px;
+  background-color: #004445;
+  padding: 15px;
 }
 
 form.search-form {
@@ -89,15 +84,13 @@ button.location-pin:hover {
 
 h1.current-temp {
   color: #fff;
-  font-size: 150px;
+  font-size: 130px;
   font-weight: 400;
-  position: relative;
-  top: 136px;
-  left: 42px;
+  padding-top: 0;
 }
 
 h2.city {
-  color: #fcd307;
+  color: #fff;
   font-size: 33px;
   font-weight: 300;
   margin-bottom: 0;
@@ -106,7 +99,7 @@ h2.city {
 }
 
 h5.date-time {
-  color: #ffdd67;
+  color: #fff;
   font-size: 21px;
   font-weight: 300;
   text-align: right;
@@ -118,8 +111,7 @@ ul {
   font-weight: 300;
   line-height: 2rem;
   list-style-type: none;
-  padding-left: 45px;
-  padding-top: 40px;
+  padding-top: 0;
   text-align: right;
 }
 
@@ -132,7 +124,6 @@ div.forecast {
   color: #fff;
   font-weight: 300;
   margin-top: 0;
-  padding-top: 10px;
   text-align: center;
 }
 
@@ -147,4 +138,13 @@ span.future-temp {
   font-weight: 200;
   position: relative;
   top: -23px;
+}
+
+.city-col {
+  padding-bottom: 50px;
+}
+
+.weather-app {
+  border: 10px solid #e85b48;
+  border-radius: 10px;
 }

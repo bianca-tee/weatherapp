@@ -33,7 +33,7 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="container weather-app">
       <div class="row header">
         <div class="col">
           <h1 class="title">weather<span class="title-app">app</span></h1>
@@ -54,14 +54,21 @@
             <i class="fa-solid fa-map-pin pin"></i>
           </button>
         </div>
-        <div class="col-5">
-          <img src="" alt="" class="main-icon" id="icon" />
-          <h1 class="current-temp" id="current-temp">14°</h1>
-        </div>
-        <div class="col-7">
+        <div class="col-12 city-col">
           <h2 class="city" id="current-city">Sydney</h2>
           <h5 class="date-time" id="current-date-time"></h5>
-          <br />
+        </div>
+        <div class="col-8">
+          <div class="row">
+            <div class="col-7">
+              <h1 class="current-temp" id="current-temp">14°</h1>
+            </div>
+            <div class="col-5">
+              <img src="" alt="" class="main-icon" id="icon" />
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
           <ul>
             <li id="weather-overall">Cloudy</li>
             <li>
