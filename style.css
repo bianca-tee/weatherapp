@@ -65,7 +65,7 @@ button.location-pin {
 }
 
 button.location-pin:hover {
-  color: #ffdd67;
+  color: #e85b48;
   transition: all 150ms ease-in;
 }
 
@@ -95,14 +95,14 @@ h2.city {
   font-weight: 300;
   margin-bottom: 0;
   margin-top: 24px;
-  text-align: right;
+  text-align: left;
 }
 
 h5.date-time {
-  color: #fff;
+  color: #e85b48;
   font-size: 21px;
   font-weight: 300;
-  text-align: right;
+  text-align: left;
 }
 
 ul {
