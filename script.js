@@ -26,9 +26,10 @@ let dateTimeElement = document.querySelector("#current-date-time");
 dateTimeElement.innerHTML = formatDate(currentTime);
 
 function showTempCity(response) {
+  celsiusTemperature = response.data.main.temp;
   document.querySelector(`#current-city`).innerHTML = response.data.name;
   document.querySelector(`#current-temp`).innerHTML = `${Math.round(
-    response.data.main.temp
+    celsiusTemperature
   )}°`;
   document.querySelector(`#min-temp`).innerHTML = `${Math.round(
     response.data.main.temp_min
@@ -84,3 +85,24 @@ function currentLocation(event) {
 
 let locationPin = document.querySelector(`#location-pin`);
 locationPin.addEventListener("click", currentLocation);
+
+function convertFahrenheit(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#current-temp");
+  let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
+  tempElement.innerHTML = `${Math.round(fahrenheitTemp)}°`;
+}
+
+function convertCelsius(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#current-temp");
+  tempElement.innerHTML = `${Math.round(celsiusTemperature)}°`;
+}
+
+let celsiusTemperature = null;
+
+document
+  .querySelector(`#fahrenheit`)
+  .addEventListener("click", convertFahrenheit);
+
+document.querySelector("#celsius").addEventListener("click", convertCelsius);
