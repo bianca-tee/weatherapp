@@ -75,7 +75,7 @@ function getForecast(coordinates) {
 
 //Uses the lat and long to show the temp and city name, plus refers to function to get the forecast
 function showTempCity(response) {
-  celsiusTemperature = response.data.main.temp;
+  let celsiusTemperature = response.data.main.temp;
   document.querySelector(`#current-city`).innerHTML = response.data.name;
   document.querySelector(`#current-temp`).innerHTML = `${Math.round(
     celsiusTemperature
@@ -134,37 +134,6 @@ function currentLocation(event) {
 //Selected location pin and added an event listener to run currentLocation function
 let locationPin = document.querySelector(`#location-pin`);
 locationPin.addEventListener("click", currentLocation);
-
-//Celsius and Fahrenheit switch
-
-//Function to run when fahrenheit switch clicked
-function convertFahrenheit(event) {
-  event.preventDefault();
-  let tempElement = document.querySelector("#current-temp");
-  let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
-  tempElement.innerHTML = `${Math.round(fahrenheitTemp)}°`;
-}
-
-//Function to run when celsius link clicked - conversion
-function convertCelsius(event) {
-  event.preventDefault();
-  let tempElement = document.querySelector("#current-temp");
-  tempElement.innerHTML = `${Math.round(celsiusTemperature)}°`;
-}
-
-//Created global variable, which can be accessed from within function
-//Setting it initially as null, then making it the celsius temperature within the showTempCity function
-//Now it represents the accurate temperature, rather than just what is in that HTML element
-//Can be used for above calculation in the conversion
-let celsiusTemperature = null;
-
-//Added event listener to fahrenheit link when clicked
-document
-  .querySelector(`#fahrenheit`)
-  .addEventListener("click", convertFahrenheit);
-
-//Added event listener to celsius link when clicked
-document.querySelector("#celsius").addEventListener("click", convertCelsius);
 
 //Run a search of Sydney when page loads, as default
 searchCity("Sydney");

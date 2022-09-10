@@ -69,19 +69,6 @@ button.location-pin:hover {
   transition: all 150ms ease-in;
 }
 
-.c-f-switch {
-  background-color: rgb(32, 178, 170, 0.7);
-  border: solid 2px #20b2aa;
-  border-radius: 6px;
-  color: #fff;
-  font-size: 28px;
-  font-weight: 300;
-  padding: 0px 30px 0px 30px;
-  position: relative;
-  top: -20px;
-  right: -40px;
-}
-
 h1.current-temp {
   color: #fff;
   font-size: 130px;
