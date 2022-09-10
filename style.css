@@ -11,8 +11,8 @@ h1.title {
   font-weight: 200;
   letter-spacing: 9px;
   margin-bottom: 0;
-  padding-top: 40px;
-  padding-bottom: 20px;
+  padding-top: 25px;
+  padding-bottom: 30px;
   text-align: right;
 }
 
@@ -41,8 +41,8 @@ form.search-form {
 }
 
 button.search-button {
-  background-color: #20b2aa;
-  border: solid 2px #20b2aa;
+  background-color: #e85b48;
+  border: solid 2px #e85b48;
   border-radius: 6px;
   color: #fff;
   font-size: 17px;
@@ -51,7 +51,8 @@ button.search-button {
 }
 
 button.search-button:hover {
-  background-color: rgb(32, 178, 170, 0.7);
+  background-color: #fff;
+  color: #e85b48;
   transition: all 150ms ease-in-out;
 }
 
@@ -76,6 +77,7 @@ div.current-temp {
 }
 
 span.current-temp-units {
+  color: black;
   font-size: 46px;
   font-weight: 600;
   position: relative;
@@ -137,6 +139,7 @@ span.future-temp {
   border: 2px solid black;
   border-radius: 10px;
   margin-top: 20px;
+  padding: 0 15px 0 15px;
 }
 
 .weather-forecast-date {

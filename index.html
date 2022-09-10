@@ -33,65 +33,67 @@
   </head>
 
   <body>
-    <div class="container weather-app">
-      <div class="row header">
-        <div class="col">
-          <h1 class="title">weather<span class="title-app">app</span></h1>
-        </div>
-      </div>
-      <div class="row body">
-        <div class="col-12 search">
-          <form action="" class="search-form" id="search-form">
-            <input
-              type="text"
-              placeholder="Enter your city"
-              class="city-box"
-              id="city-input"
-            />
-            <button type="submit" class="search-button">Search</button>
-          </form>
-          <button class="location-pin" id="location-pin">
-            <i class="fa-solid fa-map-pin pin"></i>
-          </button>
-        </div>
-        <div class="row">
-          <div class="col-12 city-col">
-            <h2 class="city" id="current-city">Sydney</h2>
-            <h5 class="date-time" id="current-date-time"></h5>
+    <div class="container">
+      <div class="weather-app">
+        <div class="row header">
+          <div class="col">
+            <h1 class="title">weather<span class="title-app">app</span></h1>
           </div>
-          <div class="col-6"></div>
         </div>
-        <div class="col-8">
+        <div class="row body">
+          <div class="col-12 search">
+            <form action="" class="search-form" id="search-form">
+              <input
+                type="text"
+                placeholder="Enter your city"
+                class="city-box"
+                id="city-input"
+              />
+              <button type="submit" class="search-button">Search</button>
+            </form>
+            <button class="location-pin" id="location-pin">
+              <i class="fa-solid fa-map-pin pin"></i>
+            </button>
+          </div>
           <div class="row">
-            <div class="col-9">
-              <div class="current-temp" id="current-temp"></div>
-              <span class="current-temp-units">°C</span>
+            <div class="col-12 city-col">
+              <h2 class="city" id="current-city">Sydney</h2>
+              <h5 class="date-time" id="current-date-time"></h5>
             </div>
-            <div class="col-3">
-              <img src="" alt="" class="main-icon" id="icon" />
+            <div class="col-6"></div>
+          </div>
+          <div class="col-8">
+            <div class="row">
+              <div class="col-9">
+                <div class="current-temp" id="current-temp"></div>
+                <span class="current-temp-units">°C</span>
+              </div>
+              <div class="col-3">
+                <img src="" alt="" class="main-icon" id="icon" />
+              </div>
             </div>
           </div>
+          <div class="col-4">
+            <ul>
+              <li id="weather-overall">Cloudy</li>
+              <li>
+                <span id="min-temp"></span> /
+                <strong id="max-temp"></strong>
+              </li>
+              <li><span id="humidity"></span>% humidity</li>
+              <li><span id="wind"></span>m/s wind</li>
+            </ul>
+          </div>
         </div>
-        <div class="col-4">
-          <ul>
-            <li id="weather-overall">Cloudy</li>
-            <li>
-              <span id="min-temp"></span> /
-              <strong id="max-temp"></strong>
-            </li>
-            <li><span id="humidity"></span>% humidity</li>
-            <li><span id="wind"></span>m/s wind</li>
-          </ul>
+        <div id="forecast" class="forecast"></div>
+        <div class="col-12">
+          <small>
+            <a href="https://github.com/bianca-tee" target="_blank"
+              >Open-source code</a
+            >
+            by Bianca Treu
+          </small>
         </div>
-      </div>
-      <div id="forecast" class="forecast"></div>
-      <div class="col-12">
-        <small>
-          <a href="https://github.com/bianca-tee" target="_blank"
-            >Open-source code</a
-          >
-          by Bianca Treu
-        </small>
       </div>
     </div>
     <script src="script.js"></script>
