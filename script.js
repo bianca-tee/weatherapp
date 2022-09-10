@@ -21,6 +21,23 @@ function formatDate(date) {
   return `${currentDay} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col">
+          <div class="weather-icon"><i class="fa-solid fa-cloud-sun"></i></div>
+          <p>${day}</p>
+          <span class="future-temp">16°</span>
+        </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 let currentTime = new Date();
 let dateTimeElement = document.querySelector("#current-date-time");
 dateTimeElement.innerHTML = formatDate(currentTime);
@@ -106,3 +123,5 @@ document
   .addEventListener("click", convertFahrenheit);
 
 document.querySelector("#celsius").addEventListener("click", convertCelsius);
+
+displayForecast();
