@@ -5,7 +5,7 @@ body {
 }
 
 h1.title {
-  color: #fff;
+  color: black;
   font-size: 45px;
   font-style: italic;
   font-weight: 200;
@@ -23,11 +23,9 @@ span.title-app {
 }
 
 div.header {
-  background-color: rgb(32, 178, 170);
 }
 
 div.body {
-  background-color: #004445;
   padding: 15px;
 }
 
@@ -70,14 +68,14 @@ button.location-pin:hover {
 }
 
 h1.current-temp {
-  color: #fff;
+  color: black;
   font-size: 130px;
   font-weight: 400;
   padding-top: 0;
 }
 
 h2.city {
-  color: #fff;
+  color: black;
   font-size: 33px;
   font-weight: 300;
   margin-bottom: 0;
@@ -86,14 +84,14 @@ h2.city {
 }
 
 h5.date-time {
-  color: #e85b48;
+  color: black;
   font-size: 21px;
   font-weight: 300;
   text-align: left;
 }
 
 ul {
-  color: #fff;
+  color: black;
   font-size: 17px;
   font-weight: 300;
   line-height: 2rem;
@@ -103,12 +101,7 @@ ul {
 }
 
 div.forecast {
-  background: linear-gradient(
-    110.7deg,
-    rgb(9, 154, 151) 6.3%,
-    rgb(21, 205, 168) 90.6%
-  );
-  color: #fff;
+  color: black;
   font-weight: 300;
   margin-top: 0;
   text-align: center;
@@ -132,6 +125,7 @@ span.future-temp {
 }
 
 .weather-app {
-  border: 10px solid #e85b48;
+  border: 2px solid black;
   border-radius: 10px;
+  margin-top: 20px;
 }

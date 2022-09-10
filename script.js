@@ -20,7 +20,7 @@ function formatDate(date) {
     "Saturday",
   ];
   let currentDay = days[date.getDay()];
-  return `Last updated at ${currentDay} ${hours}:${minutes}`;
+  return `Last updated on ${currentDay}, at ${hours}:${minutes}`;
 }
 
 let currentTime = new Date();
@@ -101,18 +101,23 @@ function showTempCity(response) {
   getForecast(response.data.coord);
 }
 
-//Gets the city from the search form then runs the API using city name to get weather data, then runs the function showTempCity
-function searchCity(event) {
-  event.preventDefault();
-  let city = document.querySelector("#city-input").value;
+//Uses city plugged into apiurl to then carry out showTempCity function
+function searchCity(city) {
   let apiKey = "0fbc2c49d4b2c78e5faff6668811ca96";
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
   axios.get(url).then(showTempCity);
 }
 
+//Gets the city submitted in the search engine, then sends it to searchCity function above
+function handleSubmit(event) {
+  event.preventDefault();
+  let city = document.querySelector("#city-input").value;
+  searchCity(city);
+}
+
 //Selects and adds event listener to the city search form, then runs searchCity when submitted
 let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", searchCity);
+searchForm.addEventListener("submit", handleSubmit);
 
 //Accesses lat and long to do 2 things: get weather and get city based on lat and long
 function weatherHere(position) {
