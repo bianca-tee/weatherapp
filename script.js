@@ -1,5 +1,4 @@
 //Determining the current time and date
-
 function formatDate(date) {
   let hours = date.getHours();
   if (hours < 10) {
@@ -36,14 +35,13 @@ function formatDay(timestamp) {
 }
 
 //Displays the forecast with the coord data from below
-function displayForecast(response) {
+//function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
     if (index > 0 && index < 6) {
       forecastHTML =
-        forecastHTML +
         `<div class="col-2">
           <div class="weather-forecast-day">${formatDay(forecastDay.dt)}</div>
           <img
@@ -51,7 +49,6 @@ function displayForecast(response) {
             forecastDay.weather[0].icon
           }@2x.png"
           alt=""
-          width="42"
           />
           <div class="weather-forecast-temperatures">
           <span class="forecast-temp-min">
