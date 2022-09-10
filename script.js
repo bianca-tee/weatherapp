@@ -91,6 +91,7 @@ function showTempCity(response) {
   document.querySelector(`#wind`).innerHTML = Math.round(
     response.data.wind.speed
   );
+  console.log(response.data);
   document.querySelector(`#humidity`).innerHTML = response.data.main.humidity;
   document
     .querySelector(`#icon`)
