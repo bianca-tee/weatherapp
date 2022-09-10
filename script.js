@@ -27,6 +27,7 @@ let currentTime = new Date();
 let dateTimeElement = document.querySelector("#current-date-time");
 dateTimeElement.innerHTML = formatDate(currentTime);
 
+//Gives a day for the forecast
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
@@ -112,13 +113,6 @@ function searchCity(event) {
 //Selects and adds event listener to the city search form, then runs searchCity when submitted
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchCity);
-
-//Gets the city name using the lat long data although seems to be redundant given the function showTempCity seems to also produce city name
-//function getCity(response) {
-//let cityHere = response.data.locality;
-//let cityHeading = document.querySelector("#current-city");
-//cityHeading.innerHTML = cityHere;
-//}
 
 //Accesses lat and long to do 2 things: get weather and get city based on lat and long
 function weatherHere(position) {
