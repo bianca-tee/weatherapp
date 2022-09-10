@@ -26,7 +26,7 @@ div.header {
 }
 
 div.body {
-  padding: 15px;
+  padding: 0px 15px 0px 15px;
 }
 
 form.search-form {
@@ -58,7 +58,7 @@ button.search-button:hover {
 button.location-pin {
   background: none;
   border: none;
-  color: #fff;
+  color: black;
   font-size: 22px;
 }
 
@@ -67,11 +67,19 @@ button.location-pin:hover {
   transition: all 150ms ease-in;
 }
 
-h1.current-temp {
+div.current-temp {
   color: black;
+  display: inline;
   font-size: 130px;
   font-weight: 400;
   padding-top: 0;
+}
+
+span.current-temp-units {
+  font-size: 46px;
+  font-weight: 600;
+  position: relative;
+  top: -58px;
 }
 
 h2.city {
@@ -94,9 +102,9 @@ ul {
   color: black;
   font-size: 17px;
   font-weight: 300;
-  line-height: 2rem;
+  line-height: 1.8rem;
   list-style-type: none;
-  padding-top: 0;
+  padding-top: 35px;
   text-align: right;
 }
 
@@ -104,7 +112,7 @@ div.forecast {
   color: black;
   font-weight: 300;
   margin-top: 0;
-  padding-bottom: 30px;
+  padding: 30px 0 30px 0;
   text-align: center;
 }
 
@@ -129,4 +137,14 @@ span.future-temp {
   border: 2px solid black;
   border-radius: 10px;
   margin-top: 20px;
+}
+
+.weather-forecast-date {
+  font-weight: 500;
+}
+
+.main-icon {
+  position: relative;
+  bottom: -40px;
+  left: -20px;
 }

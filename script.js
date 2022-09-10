@@ -85,7 +85,7 @@ function showTempCity(response) {
   document.querySelector(`#current-city`).innerHTML = response.data.name;
   document.querySelector(`#current-temp`).innerHTML = `${Math.round(
     celsiusTemperature
-  )}°`;
+  )}`;
   document.querySelector(`#min-temp`).innerHTML = `${Math.round(
     response.data.main.temp_min
   )}°`;
