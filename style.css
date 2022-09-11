@@ -1,7 +1,5 @@
-body {
-  font-family: "Roboto", sans-serif;
-  margin: 0 auto;
-  max-width: 600px;
+.body {
+max width: 550;
 }
 
 h1.title {
@@ -11,7 +9,6 @@ h1.title {
   font-weight: 200;
   letter-spacing: 9px;
   margin-bottom: 0;
-  padding: 25px 10px 30px 0px;
   text-align: right;
 }
 
@@ -22,7 +19,6 @@ span.title-app {
 }
 
 div.body {
-  padding: 0px 15px 0px 15px;
 }
 
 form.search-form {
@@ -69,7 +65,6 @@ div.current-temp {
   display: inline;
   font-size: 130px;
   font-weight: 400;
-  padding-top: 0;
 }
 
 span.current-temp-units {
@@ -84,8 +79,6 @@ h2.city {
   color: black;
   font-size: 33px;
   font-weight: 300;
-  margin-bottom: 0;
-  margin-top: 24px;
   text-align: left;
 }
 
@@ -102,7 +95,6 @@ ul {
   font-weight: 300;
   line-height: 1.8rem;
   list-style-type: none;
-  padding-top: 35px;
   text-align: right;
 }
 
@@ -110,32 +102,20 @@ div.forecast {
   background-color: darkcyan;
   color: black;
   font-weight: 300;
-  margin-top: 0;
-  padding: 30px 0 30px 0;
+  padding: 0;
   text-align: center;
 }
 
-div.weather-icon {
-  color: rgb(255, 255, 255, 0.7);
-  font-size: 30px;
-  padding: 5px 0 5px 0;
-}
-
-span.future-temp {
-  font-size: 24px;
-  font-weight: 200;
-  position: relative;
-  top: -23px;
-}
-
 .city-col {
-  padding-bottom: 50px;
 }
 
 .weather-app {
   border: 2px solid black;
   border-radius: 10px;
   margin-top: 20px;
+  font-family: "Roboto", sans-serif;
+  margin: 0 auto;
+  max-width: 550px;
 }
 
 .weather-forecast-date {

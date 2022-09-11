@@ -40,7 +40,7 @@ function displayForecast(response) {
 
   let forecastElement = document.querySelector("#forecast");
 
-  let forecastHTML = `<div class="row">`;
+  let forecastHTML = `<div class="row mx-0">`;
   forecast.forEach(function (forecastDay, index) {
     if (index > 0 && index < 6) {
       forecastHTML =
