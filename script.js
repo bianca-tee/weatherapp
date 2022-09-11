@@ -1,4 +1,3 @@
-//Determining the current time and date
 function formatDate(date) {
   let hours = date.getHours();
   if (hours < 10) {
@@ -26,7 +25,6 @@ let currentTime = new Date();
 let dateTimeElement = document.querySelector("#current-date-time");
 dateTimeElement.innerHTML = formatDate(currentTime);
 
-//Gives a day for the forecast
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
@@ -34,7 +32,6 @@ function formatDay(timestamp) {
   return days[day];
 }
 
-//Displays the forecast with the coord data from below
 function displayForecast(response) {
   let forecast = response.data.daily;
 
@@ -72,14 +69,12 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 
-//Function that uses coords in an apiURL that allows us to get forecast, then runs fn displayForecast
 function getForecast(coordinates) {
   let apiKey = "a43564c91a6c605aeb564c9ed02e3858";
   let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
 
-//Uses the lat and long to show the temp and city name, plus refers to function to get the forecast
 function showTempCity(response) {
   let celsiusTemperature = response.data.main.temp;
   document.querySelector(`#current-city`).innerHTML = response.data.name;
@@ -107,44 +102,35 @@ function showTempCity(response) {
   getForecast(response.data.coord);
 }
 
-//Uses city plugged into apiurl to then carry out showTempCity function
 function searchCity(city) {
   let apiKey = "0fbc2c49d4b2c78e5faff6668811ca96";
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
   axios.get(url).then(showTempCity);
 }
 
-//Gets the city submitted in the search engine, then sends it to searchCity function above
 function handleSubmit(event) {
   event.preventDefault();
   let city = document.querySelector("#city-input").value;
   searchCity(city);
 }
 
-//Selects and adds event listener to the city search form, then runs searchCity when submitted
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
-//Accesses lat and long to do 2 things: get weather and get city based on lat and long
 function weatherHere(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
   let apiKey = "0fbc2c49d4b2c78e5faff6668811ca96";
   let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&lang=en&units=metric`;
   axios.get(weatherUrl).then(showTempCity);
-  //let cityUrl = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lon}&localityLanguage=en`;
-  //axios.get(cityUrl).then(getCity);
 }
 
-//Gets the position then tells it to run the weatherHere function with the data
 function currentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(weatherHere);
 }
 
-//Selected location pin and added an event listener to run currentLocation function
 let locationPin = document.querySelector(`#location-pin`);
 locationPin.addEventListener("click", currentLocation);
 
-//Run a search of Sydney when page loads, as default
 searchCity("Sydney");
