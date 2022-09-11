@@ -40,13 +40,13 @@ function displayForecast(response) {
 
   let forecastElement = document.querySelector("#forecast");
 
-  let forecastHTML = `<div class="row mx-0">`;
+  let forecastHTML = `<div class="row mx-0 px-0">`;
   forecast.forEach(function (forecastDay, index) {
     if (index > 0 && index < 6) {
       forecastHTML =
         forecastHTML +
         `
-      <div class="col">
+      <div class="col px-0">
         <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
         <img
           src="http://openweathermap.org/img/wn/${

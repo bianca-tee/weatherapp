@@ -1,14 +1,21 @@
-.body {
-max width: 550;
+div.weather-app {
+  border: 2px solid black;
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  margin: 20px auto;
+  max-width: 550px;
+  padding: 20px;
+}
+
+div.header {
+  padding-bottom: 30px;
 }
 
 h1.title {
-  color: black;
   font-size: 45px;
   font-style: italic;
   font-weight: 200;
   letter-spacing: 9px;
-  margin-bottom: 0;
   text-align: right;
 }
 
@@ -18,15 +25,12 @@ span.title-app {
   font-weight: 400;
 }
 
-div.body {
-}
-
 form.search-form {
   display: inline;
 }
 
 .city-box {
-  border: solid 1px black;
+  border: solid 1px;
   border-radius: 6px;
   font-weight: 300;
   padding: 5px;
@@ -60,25 +64,15 @@ button.location-pin:hover {
   transition: all 150ms ease-in;
 }
 
-div.current-temp {
-  color: black;
-  display: inline;
-  font-size: 130px;
-  font-weight: 400;
-}
-
-span.current-temp-units {
-  color: black;
-  font-size: 46px;
-  font-weight: 600;
-  position: relative;
-  top: -58px;
+div.city-col {
+  padding-top: 25px;
 }
 
 h2.city {
   color: black;
   font-size: 33px;
   font-weight: 300;
+  margin-bottom: 0;
   text-align: left;
 }
 
@@ -89,41 +83,45 @@ h5.date-time {
   text-align: left;
 }
 
-ul {
-  color: black;
-  font-size: 17px;
-  font-weight: 300;
-  line-height: 1.8rem;
-  list-style-type: none;
-  text-align: right;
+div.current-temp {
+  display: inline;
+  font-size: 130px;
+  font-weight: 400;
 }
 
-div.forecast {
-  background-color: darkcyan;
-  color: black;
-  font-weight: 300;
-  padding: 0;
-  text-align: center;
-}
-
-.city-col {
-}
-
-.weather-app {
-  border: 2px solid black;
-  border-radius: 10px;
-  margin-top: 20px;
-  font-family: "Roboto", sans-serif;
-  margin: 0 auto;
-  max-width: 550px;
-}
-
-.weather-forecast-date {
-  font-weight: 500;
+span.current-temp-units {
+  font-size: 46px;
+  font-weight: 600;
+  position: relative;
+  top: -58px;
 }
 
 .main-icon {
   position: relative;
   bottom: -40px;
   left: -20px;
+}
+
+ul {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.8rem;
+  list-style-type: none;
+  padding-top: 39px;
+  text-align: right;
+}
+
+div.forecast {
+  font-weight: 300;
+  padding: 10px 0px 30px 0px;
+  text-align: center;
+}
+
+.weather-forecast-date {
+  font-weight: 500;
+  line-height: 2rem;
+}
+
+.weather-forecast-temperatures {
+  line-height: 2rem;
 }
